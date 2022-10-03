@@ -1,0 +1,21 @@
+{
+    "$schema": "https://raw.githubusercontent.com/microsoft/vcpkg/master/scripts/vcpkg.schema.json",
+    "name": "baseplugin",
+    "version-string": "1.0.0",
+    "port-version": 0,
+    "description": "",
+    "homepage": "",
+    "license": "CC-BY-SA-4.0",
+    "features": {
+        "plugin": {
+            "description": "Build the SKSE plugin.",
+            "dependencies": [
+                "articuno",
+                "commonlibsse-ng"
+            ]
+        }
+    },
+    "default-features": [
+        "plugin"
+    ]
+}
