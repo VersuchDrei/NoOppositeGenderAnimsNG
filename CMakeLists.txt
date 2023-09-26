@@ -5,7 +5,7 @@ message("Using toolchain file ${CMAKE_TOOLCHAIN_FILE}.")
 ## Define project
 ########################################################################################################################
 project(
-        BasePlugin
+        NoOppositeGenderAnims
         VERSION 1.0.0
         DESCRIPTION ""
         LANGUAGES CXX)
