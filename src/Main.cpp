@@ -36,6 +36,18 @@ namespace {
                 for (RE::TESNPC* npc : npcs) {
                     npc->actorData.actorBaseFlags.reset(RE::ACTOR_BASE_DATA::Flag::kOppositeGenderanims);
                 }
+
+                RE::TESRace* NordRace = handler->LookupForm<RE::TESRace>(0x013746, "Skyrim.esm");
+
+                RE::TESRace* OrcRace = handler->LookupForm<RE::TESRace>(0x013747, "Skyrim.esm");
+                OrcRace->behaviorGraphs[RE::SEXES::kFemale] = NordRace->behaviorGraphs[RE::SEXES::kFemale];
+                OrcRace->rootBehaviorGraphNames[RE::SEXES::kFemale] = NordRace->rootBehaviorGraphNames[RE::SEXES::kFemale];
+                OrcRace->behaviorGraphProjectNames[RE::SEXES::kFemale] = NordRace->behaviorGraphProjectNames[RE::SEXES::kFemale];
+
+                RE::TESRace* OrcRaceVampire = handler->LookupForm<RE::TESRace>(0x0A82B9, "Skyrim.esm");
+                OrcRaceVampire->behaviorGraphs[RE::SEXES::kFemale] = NordRace->behaviorGraphs[RE::SEXES::kFemale];
+                OrcRaceVampire->rootBehaviorGraphNames[RE::SEXES::kFemale] = NordRace->rootBehaviorGraphNames[RE::SEXES::kFemale];
+                OrcRaceVampire->behaviorGraphProjectNames[RE::SEXES::kFemale] = NordRace->behaviorGraphProjectNames[RE::SEXES::kFemale];
             }
         }
     }
